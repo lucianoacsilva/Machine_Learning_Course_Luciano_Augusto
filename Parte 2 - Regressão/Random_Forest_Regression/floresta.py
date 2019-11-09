@@ -34,11 +34,12 @@ y_train = sc_y.fit_transform(y_train)"""
 
 from sklearn.ensemble import RandomForestRegressor
 
-regressor = RandomForestRegressor(n_estimators= 1, random_state= 0)
+print("Fitting the regressor")
+regressor = RandomForestRegressor(n_estimators= 40000, random_state= 0)
 regressor.fit(X, y)
 
 # Predicting a new result
-y_pred = regressor.predict(6.5)
+#y_pred = regressor.predict(6.5)
 
 # Visualising the Regression results (for higher resolution and smoother curve)
 X_grid = np.arange(min(X), max(X), 0.01)
